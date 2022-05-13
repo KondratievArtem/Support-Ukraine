@@ -309,6 +309,7 @@ body {
   border: 1px solid #fafafa;
   border-radius: 10px;
   cursor: pointer;
+  position: relative;
 }
 
 .box-menu__header {
@@ -335,6 +336,10 @@ body {
   font-size: 1.8rem;
 }
 
+.box-menu__img {
+  margin: 0rem 0rem 0rem 0.2rem;
+}
+
 .box-menu__line {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -345,6 +350,38 @@ body {
 
 .box-menu__body {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 102%;
+  padding: 0rem 2.3rem;
+  border: 1px solid #fafafa;
+  background-color: #ffffff;
+  border-top: 1px solid #fff;
+  border-radius: 0px 0px 10px 10px;
+  cursor: pointer;
+}
+
+.box-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid #DEDEDE;
+  padding: 1.5rem 0;
+}
+
+.box-menu__select.activ {
+  padding: 1.5rem 2.3rem;
+  border: 1px solid #fafafa;
+  border-bottom: 1px solid #fff;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.box-menu__select.activ .box-menu__body {
+  display: block;
 }
 
 .br-menu {

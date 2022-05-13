@@ -11,4 +11,14 @@ document.querySelector('.logo__open-burger').onclick = () => {
 };
 document.querySelector('.br-menu__close').onclick = () => {
     document.querySelector('.br-menu').classList.remove('activ');
-}
+};
+
+// функционал для селектора выбора языка
+
+document.querySelectorAll('.box-menu__header').forEach(item => {
+    item.onclick = () => {
+        document.querySelectorAll('.box-menu__select').forEach(icon => {
+            icon.classList.toggle('activ');
+        });
+    };
+});
