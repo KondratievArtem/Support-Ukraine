@@ -53,3 +53,16 @@ let countDowenFunction = setInterval(function () {
     document.querySelector('.header-main__hors').innerHTML = hours;
     document.querySelector('.header-main__minut').innerHTML = minutes;
 }, 1000)
+
+// Функционал для спойлера
+
+document.querySelectorAll('.question__ikon-title').forEach(ikon => {
+    ikon.addEventListener('click', function () {
+        if (this.parentNode.classList.contains('activ')) {
+            this.parentNode.classList.remove('activ')
+        } else {
+            document.querySelectorAll('.question__ikon').forEach(parent => { parent.classList.remove('activ') })
+            this.parentNode.classList.add('activ')
+        }
+    })
+})
