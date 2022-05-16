@@ -855,7 +855,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%;
+  width: 55%;
   height: 100%;
 }
 
@@ -867,6 +867,11 @@ body {
 
 .shop__title {
   margin-bottom: 3.8rem;
+  text-transform: none;
+}
+
+.shop__title h2 span {
+  display: block;
 }
 
 .shop__button {
