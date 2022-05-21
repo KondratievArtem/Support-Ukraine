@@ -545,6 +545,75 @@ body {
   padding: 12rem 0;
 }
 
+.whats-main__container {
+  min-width: 0;
+}
+
+.whats-main__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5.4rem;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slider__ikon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 53.2rem;
+}
+
+.slider__ikon:nth-child(even) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.slider__body {
+  text-align: center;
+}
+
+.slider__body_text {
+  max-width: 28.8rem;
+  padding: 3.6rem;
+}
+
+.slider__body_ibg img {
+  max-width: 100%;
+}
+
+.slider__scroll {
+  max-width: 55.2rem;
+  height: .7rem;
+  margin: 3.5rem auto 0;
+}
+
+.swiper-scrollbar {
+  width: 100%;
+  height: 100%;
+}
+
 .world__container {
   display: -webkit-box;
   display: -ms-flexbox;

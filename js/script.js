@@ -54,6 +54,24 @@ let countDowenFunction = setInterval(function () {
     document.querySelector('.header-main__minut').innerHTML = minutes;
 }, 1000)
 
+// ФУНКЦИЯ СЛАЙДЕРА
+
+new Swiper('.whats-main__slider', {
+    loop: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        450: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+    },
+});
+
+
 // Функционал для спойлера
 
 document.querySelectorAll('.question__ikon-title').forEach(ikon => {
