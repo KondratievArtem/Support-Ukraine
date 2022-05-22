@@ -57,7 +57,10 @@ let countDowenFunction = setInterval(function () {
 // ФУНКЦИЯ СЛАЙДЕРА
 
 new Swiper('.whats-main__slider', {
-    loop: true,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
     breakpoints: {
         320: {
             slidesPerView: 1,
@@ -65,7 +68,7 @@ new Swiper('.whats-main__slider', {
         450: {
             slidesPerView: 2,
         },
-        768: {
+        769: {
             slidesPerView: 3,
         },
     },
