@@ -37,7 +37,7 @@ document.querySelectorAll('.box-menu__item').forEach(item => {
 
 // создание времени одчета==============================
 // получение времени от которого наченаеться отчет======
-let date = new Date(2022, 1, 24, 5).getTime();
+let date = new Date(2022, 1, 23,).getTime();
 // обновление таймера=============
 let countDowenFunction = setInterval(function () {
     // время на данный момент
