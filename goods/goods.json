@@ -1,0 +1,146 @@
+{
+    "158-56-85": {
+        "name": "slava ukraine",
+        "type": "Sweatshirt",
+        "color": "black",
+        "inStock": 1,
+        "prace": 850,
+        "imge": "sweatshirt b.png"
+    },
+    "158-56-70": {
+        "name": "slava ukraine",
+        "type": "Sweatshirt",
+        "color": "white",
+        "inStock": 1,
+        "prace": 850,
+        "imge": "sweatshirt w.png"
+    },
+    "158-56-71": {
+        "name": "slava ukraine",
+        "type": "Prapor",
+        "color": "white",
+        "inStock": 1,
+        "prace": 400,
+        "imge": "image 16.png"
+    },
+    "158-56-72": {
+        "name": "slava ukraine",
+        "type": "baner",
+        "color": "black",
+        "inStock": 50,
+        "prace": 150,
+        "imge": "image 24.png"
+    },
+    "158-56-73": {
+        "name": "slava ukraine",
+        "type": "baner",
+        "color": "white",
+        "inStock": 60,
+        "prace": 200,
+        "imge": "image 17.png"
+    },
+    "158-56-74": {
+        "name": "slava ukraine",
+        "type": "Stiker",
+        "color": "black",
+        "inStock": 30,
+        "prace": 75,
+        "imge": "image 18.png"
+    },
+    "158-56-75": {
+        "name": "slava ukraine",
+        "type": "footbolka",
+        "color": "white",
+        "inStock": 30,
+        "prace": 350,
+        "imge": "image 19 .png"
+    },
+    "158-56-77": {
+        "name": "slava ukraine",
+        "type": "footbolka",
+        "color": "black",
+        "inStock": 25,
+        "prace": 300,
+        "imge": "image 29.png"
+    },
+    "158-56-78": {
+        "name": "slava ukraine",
+        "type": "baysbolka",
+        "color": "black",
+        "inStock": 1,
+        "prace": 600,
+        "imge": "image 26.png"
+    },
+    "158-56-79": {
+        "name": "slava ukraine",
+        "type": "baysbolka",
+        "color": "white",
+        "inStock": 75,
+        "prace": 550,
+        "imge": "image 21.png"
+    },
+    "158-56-80": {
+        "name": "slava ukraine",
+        "type": "sumka",
+        "color": "black",
+        "inStock": 300,
+        "prace": 60,
+        "imge": "image 28.png"
+    },
+    "158-56-82": {
+        "name": "slava ukraine",
+        "type": "sumka",
+        "color": "white",
+        "inStock": 15,
+        "prace": 55,
+        "imge": "image 27.png"
+    },
+    "158-56-50": {
+        "name": "slava ukraine",
+        "type": "footbolka",
+        "color": "white",
+        "inStock": 30,
+        "prace": 350,
+        "imge": "image 19 .png"
+    },
+    "158-56-60": {
+        "name": "slava ukraine",
+        "type": "footbolka",
+        "color": "black",
+        "inStock": 25,
+        "prace": 300,
+        "imge": "image 29.png"
+    },
+    "158-56-30": {
+        "name": "slava ukraine",
+        "type": "baysbolka",
+        "color": "black",
+        "inStock": 1,
+        "prace": 600,
+        "imge": "image 26.png"
+    },
+    "158-56-29": {
+        "name": "slava ukraine",
+        "type": "baysbolka",
+        "color": "white",
+        "inStock": 75,
+        "prace": 550,
+        "imge": "image 21.png"
+    },
+    "158-56-28": {
+        "name": "slava ukraine",
+        "type": "sumka",
+        "color": "black",
+        "inStock": 300,
+        "prace": 60,
+        "imge": "image 28.png"
+    },
+    "158-56-27": {
+        "name": "slava ukraine",
+        "type": "sumka",
+        "color": "white",
+        "inStock": 15,
+        "prace": 55,
+        "imge": "image 27.png"
+    }
+}

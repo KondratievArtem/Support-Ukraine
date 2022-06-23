@@ -55,3 +55,41 @@ document.querySelectorAll('.box-menu__item').forEach(item => {
 document.querySelector('.catalog__ikon-filter').onclick = () => {
     document.querySelector('.catalog__filtr').classList.toggle('activ');
 }
+
+
+function init() {
+    $.getJSON("goods/goods.json", goodsOut);
+}
+
+function goodsOut(data) {
+    let out = ' ';
+    for (let key in data) {
+        out += `<div class="content-ikon">`
+        out += `<div class="content-ikon__img">`
+        out += `<div class="content-ikon__logo">`
+        out += `<div class="content-ikon__logo-img">`
+        out += `<img src="img/main/Group.svg" alt="Group.svg">`
+        out += `</div>`
+        out += `<div class="content-ikon__logo-text">`
+        out += `<p>support ukraine</p>`
+        out += `</div>`
+        out += `</div>`
+        out += `<a class = "content-ikon__img-ibg _ibg" href="goods.html">`
+        out += `<img src="goods/img/${data[key].imge}" alt="">`
+        out += `</a>`
+        out += `</div>`
+        out += `<div class="content-ikon__naim">`
+        out += `<a href="goods.html">`
+        out += `<p>${data[key].type} ${data[key].name} ${data[key].color}</p>`
+        out += `</a>`
+        out += `</div>`
+        out += `<div class="content-ikon__cost">`
+        out += `<p>${data[key].prace} UAN</p>`
+        out += `</div>`
+        out += `</div>`
+        $('.catalog__content').html(out);
+    }
+}
+
+init();
+
