@@ -56,6 +56,7 @@ document.querySelector('.catalog__ikon-filter').onclick = () => {
     document.querySelector('.catalog__filtr').classList.toggle('activ');
 }
 
+// вівод товара с json файла.
 
 function init() {
     $.getJSON("goods/goods.json", goodsOut);
@@ -74,12 +75,12 @@ function goodsOut(data) {
         out += `<p>support ukraine</p>`
         out += `</div>`
         out += `</div>`
-        out += `<a class = "content-ikon__img-ibg _ibg" href="goods.html">`
-        out += `<img src="goods/img/${data[key].imge}" alt="">`
+        out += `<a class ="content-ikon__img-ibg _ibg add-art" href="goods.html" data-id="${key}">`
+        out += `<img src="goods/img/${data[key].imge}" alt="img goods">`
         out += `</a>`
         out += `</div>`
         out += `<div class="content-ikon__naim">`
-        out += `<a href="goods.html">`
+        out += `<a href="#" >`
         out += `<p>${data[key].type} ${data[key].name} ${data[key].color}</p>`
         out += `</a>`
         out += `</div>`
@@ -88,8 +89,30 @@ function goodsOut(data) {
         out += `</div>`
         out += `</div>`
         $('.catalog__content').html(out);
+        $('.add-art').on('click', addId);
     }
+
+    let key = Object.keys(data).length
+
+    out = ` <span>Показано 1 - 21</span> з ${key} продуктів`
+
+    $('.catalog__list-info').html(out);
+
 }
 
-init();
+
+
+function addId() {
+    let id = $(this).attr('data-id'),
+        idGoods = {}; //сохранение id в обект
+    idGoods = id
+    localStorage.setItem('SUid', JSON.stringify(idGoods));
+}
+
+
+$(document).ready(function () {
+    init();
+})
+
+
 
