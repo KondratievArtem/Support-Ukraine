@@ -65,36 +65,37 @@ function init() {
 function goodsOut(data) {
     let out = ' ';
     for (let key in data) {
-        out += `<div class="content-ikon">`
-        out += `<div class="content-ikon__img">`
-        out += `<div class="content-ikon__logo">`
-        out += `<div class="content-ikon__logo-img">`
-        out += `<img src="img/main/Group.svg" alt="Group.svg">`
-        out += `</div>`
-        out += `<div class="content-ikon__logo-text">`
-        out += `<p>support ukraine</p>`
-        out += `</div>`
-        out += `</div>`
-        out += `<a class ="content-ikon__img-ibg _ibg add-art" href="goods.html" data-id="${key}">`
-        out += `<img src="goods/img/${data[key].imge}" alt="img goods">`
-        out += `</a>`
-        out += `</div>`
-        out += `<div class="content-ikon__naim">`
-        out += `<a href="#" >`
-        out += `<p>${data[key].type} ${data[key].name} ${data[key].color}</p>`
-        out += `</a>`
-        out += `</div>`
-        out += `<div class="content-ikon__cost">`
-        out += `<p>${data[key].prace} UAN</p>`
-        out += `</div>`
-        out += `</div>`
+
+        out += `<div class="content-ikon ${data[key].type}">`;
+        out += `<div class="content-ikon__img">`;
+        out += `<div class="content-ikon__logo">`;
+        out += `<div class="content-ikon__logo-img">`;
+        out += `<img src="img/main/Group.svg" alt="Group.svg">`;
+        out += `</div>`;
+        out += `<div class="content-ikon__logo-text">`;
+        out += `<p>support ukraine</p>`;
+        out += `</div>`;
+        out += `</div>`;
+        out += `<a class ="content-ikon__img-ibg _ibg add-art" href="goods.html" data-id="${key}">`;
+        out += `<img src="goods/img/${data[key].imge}" alt="img goods">`;
+        out += `</a>`;
+        out += `</div>`;
+        out += `<div class="content-ikon__naim">`;
+        out += `<a href="#" >`;
+        out += `<p>${data[key].type} ${data[key].name} ${data[key].color}</p>`;
+        out += `</a>`;
+        out += `</div>`;
+        out += `<div class="content-ikon__cost">`;
+        out += `<p>${data[key].prace} UAN</p>`;
+        out += `</div>`;
+        out += `</div>`;
         $('.catalog__content').html(out);
         $('.add-art').on('click', addId);
     }
 
-    let key = Object.keys(data).length
+    let key = Object.keys(data).length;
 
-    out = ` <span>Показано 1 - 21</span> з ${key} продуктів`
+    out = ` <span>Показано 1 - 21</span> з ${key} продуктів`;
 
     $('.catalog__list-info').html(out);
 
@@ -105,7 +106,7 @@ function goodsOut(data) {
 function addId() {
     let id = $(this).attr('data-id'),
         idGoods = {}; //сохранение id в обект
-    idGoods = id
+    idGoods = id;
     localStorage.setItem('SUid', JSON.stringify(idGoods));
 }
 
@@ -113,6 +114,41 @@ function addId() {
 $(document).ready(function () {
     init();
 })
+// ====================================================================
+
+let teg = document.getElementsByClassName('content-ikon'),
+    getFilt = []; //фильтр масив
+
+document.querySelectorAll('.filtr__block-input').forEach(element => {
+    element.addEventListener('input', filtr);
+})
+
+document.querySelector('#reset-button').onclick = () => {
+    getFilt.splice(0);
+    init()
+}
+
+// 
+
+
+function filtr() {
+
+    if (this.checked) {
+        getFilt.splice(0, 1, this.value);
+
+    } else {
+        let idex = getFilt.indexOf(this.value);
+        getFilt.splice(idex, 1);
+        init()
+    }
 
 
 
+    for (let elem of teg) {
+        elem.classList.remove('_none');
+        if (!elem.classList.contains(getFilt)) {
+            elem.classList.add('_none');
+        }
+    }
+
+}

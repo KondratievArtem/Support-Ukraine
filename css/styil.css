@@ -87,6 +87,10 @@ h6 {
 }
 
 /*--------------------------*/
+._none {
+  display: none;
+}
+
 .filtr-title h4 {
   font-size: 2rem;
   font-weight: 600;
