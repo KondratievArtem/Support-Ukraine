@@ -66,7 +66,7 @@ function goodsOut(data) {
     let out = ' ';
     for (let key in data) {
 
-        out += `<div class="content-ikon ${data[key].type}">`;
+        out += `<div class="content-ikon" data-type ="${data[key].type}">`;
         out += `<div class="content-ikon__img">`;
         out += `<div class="content-ikon__logo">`;
         out += `<div class="content-ikon__logo-img">`;
@@ -117,14 +117,15 @@ $(document).ready(function () {
 // ====================================================================
 
 let teg = document.getElementsByClassName('content-ikon'),
-    getFilt = []; //фильтр масив
+    getFilt = {}; //фильтр масив
 
 document.querySelectorAll('.filtr__block-input').forEach(element => {
     element.addEventListener('input', filtr);
 })
 
 document.querySelector('#reset-button').onclick = () => {
-    getFilt.splice(0);
+    delete getFilt;
+    console.log(getFilt)
     init()
 }
 
@@ -132,23 +133,30 @@ document.querySelector('#reset-button').onclick = () => {
 
 
 function filtr() {
+    id = this.value;
 
     if (this.checked) {
-        getFilt.splice(0, 1, this.value);
+        getFilt[id] = 1
 
     } else {
-        let idex = getFilt.indexOf(this.value);
-        getFilt.splice(idex, 1);
-        init()
+        delete getFilt[id]
+        if (Object.keys(getFilt).length === 0) { return init() }
     }
-
-
+    console.log(getFilt)
 
     for (let elem of teg) {
-        elem.classList.remove('_none');
-        if (!elem.classList.contains(getFilt)) {
+
+
+        if (elem.dataset.type in getFilt) {
+            elem.classList.remove('_none');
+        } else {
             elem.classList.add('_none');
+
         }
     }
 
+
+
 }
+
+
